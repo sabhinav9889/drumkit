@@ -4,6 +4,7 @@ for(var i=0 ; i<document.querySelectorAll(".drum").length ; i++){
         makesound(num); call_listner(num);
     });
 }
+var lis=['w','a','s','d','j','k','l'];
 document.addEventListener('keypress',function(event){const key=event.key;
     if(lis.includes(key)){
         call_listner(key);
