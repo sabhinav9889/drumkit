@@ -4,9 +4,11 @@ for(var i=0 ; i<document.querySelectorAll(".drum").length ; i++){
         makesound(num); call_listner(num);
     });
 }
-document.addEventListener('keypress',function(event){
-    const key=event.key; call_listner(key);
-    makesound(key);
+document.addEventListener('keypress',function(event){const key=event.key;
+    if(lis.includes(key)){
+        call_listner(key);
+        makesound(key);
+    }
 });
 
 function makesound(key){
